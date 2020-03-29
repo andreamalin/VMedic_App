@@ -35,4 +35,20 @@
         android:id="@+id/admin"
         android:name="com.example.vmedic.admin.Admin"
         android:label="Admin" />
+    <fragment
+        android:id="@+id/principalMedicine"
+        android:name="com.example.vmedic.medicine.PrincipalMedicine"
+        android:label="PrincipalMedicine" >
+        <action
+            android:id="@+id/action_principalMedicine_to_stockSearch"
+            app:destination="@id/stockSearch"
+            tools:layout="@layout/fragment_stock_search"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/stockSearch"
+        android:name="com.example.vmedic.medicine.medicineStock.StockSearch"
+        android:label="StockSearch" />
+
+
 </navigation>

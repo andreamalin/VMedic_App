@@ -10,51 +10,43 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.vmedic.R
-import com.example.vmedic.databinding.FragmentPrincipalBinding
-import com.example.vmedic.principal.VMedicDataBase
-import kotlinx.android.synthetic.main.fragment_principal.*
+import com.example.vmedic.databinding.FragmentStockLocationBinding
+import kotlinx.android.synthetic.main.fragment_stock_location.*
 
 class PrincipalMedicine : Fragment() {
-    private lateinit var binding: FragmentPrincipalBinding
+    private lateinit var binding: FragmentStockLocationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val db = VMedicDataBase(context) //DB
+        val db = MedicineDataBase(context) //DB
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_principal, container, false
+            R.layout.fragment_stock_location, container, false
         )
         //Spinner
-        val adapter = ArrayAdapter(context!!, android.R.layout.simple_spinner_item, db.getOrg())
-        binding.spinnerOrg.adapter = adapter
+        val adapter = ArrayAdapter(context!!, android.R.layout.simple_spinner_item, db.getPresentation())
+        binding.spinnerPresentation.adapter = adapter
 
         //Accepting account
-        binding.buttonAccept.setOnClickListener {
+        binding.buttonSearch.setOnClickListener {
             //Get info of last account
-            val username = editTextUsername.getText().toString()
-            val password = editTextPassword.getText().toString()
-            val org = spinnerOrg.getSelectedItem().toString()
+            val name = editTextMedicine.getText().toString()
+            val presentation = spinnerPresentation.getSelectedItem().toString()
 
-            if (db.getUser(username, password, org)) {
-                val job = db.getJob()
-                Toast.makeText(activity, "Hola $username :) puesto $job", Toast.LENGTH_SHORT).show()
+            if (db.getMedicine(name, presentation)) {
 
-                if (job == "Admin") {
-                    view!!.findNavController().navigate(R.id.action_principal_to_admin)
-                } else if (job == "Doctor") {
-                    view!!.findNavController().navigate(R.id.action_principal_to_doctor)
-                } else {
-                    view!!.findNavController().navigate(R.id.action_principal_to_volunteer)
-                }
+
+                view!!.findNavController().navigate(R.id.action_principalMedicine_to_stockSearch)
+
 
             } else {
                 Toast.makeText(
                     activity,
-                    "El usuario $username no fue encontrado",
+                    "El medicamento $name no fue encontrado",
                     Toast.LENGTH_SHORT
                 ).show()
             }
