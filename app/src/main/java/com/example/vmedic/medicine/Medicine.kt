@@ -26,12 +26,17 @@ class Medicine{
     @ColumnInfo(name = "due_date")
     var dueDate: String  = ""
 
+    //Medicine's Due date
+    @ColumnInfo(name = "location")
+    var location: String  = ""
+
 
     //For new medicine
-    constructor(name: String, amount: Int, presentation: String, dueDate: String) {
+    constructor(name: String, amount: Int, presentation: String, dueDate: String, location: String) {
         this.name = name
         this.amount = amount
         this.presentation = presentation
         this.dueDate = dueDate
+        this.location = location
     }
 }
