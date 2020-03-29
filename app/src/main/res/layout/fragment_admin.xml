@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".principal.Principal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewLogo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <Button
+            android:id="@+id/buttonInventario"
+            android:layout_width="195dp"
+            android:layout_height="59dp"
+            android:background="#3F51B5"
+            android:fontFamily="serif-monospace"
+            android:text="@string/botoAdmi"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <Button
+            android:id="@+id/buttonAgregar"
+            android:layout_width="182dp"
+            android:layout_height="64dp"
+            android:background="#3F51B5"
+            android:fontFamily="serif-monospace"
+            android:text="@string/botoAdmii"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="545dp" />
+
+        <Button
+            android:id="@+id/buttonCerrar"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:background="#FAF50909"
+            android:text="x"
+            android:textColor="#FDF7F7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="664dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="@string/adm"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="172dp" />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/editAdmi"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="235dp" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/editAdmii"
+            android:inputType="textShortMessage"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/editAdmiii"
+            android:inputType="textLongMessage"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="369dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
