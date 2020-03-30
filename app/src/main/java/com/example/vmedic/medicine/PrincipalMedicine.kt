@@ -39,7 +39,6 @@ class PrincipalMedicine : Fragment() {
 
             if (db.getMedicine(name, presentation)) {
 
-
                 view!!.findNavController().navigate(R.id.action_principalMedicine_to_stockSearch)
 
 

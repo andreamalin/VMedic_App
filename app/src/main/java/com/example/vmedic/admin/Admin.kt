@@ -37,8 +37,10 @@ class Admin: Fragment() {
             val name = et1.getText().toString()
             val presentation = et2.getText().toString()
             val amount = et3.getText().toString().toInt()
+            val dueDate = et4.getText().toString()
+            val location = et5.getText().toString()
 
-            db.insert(Medicine(name, amount, presentation, name, presentation))
+            db.insert(Medicine(name, amount, presentation, dueDate, location))
             Toast.makeText(
                 activity,
                 "Los medicamentos se han añadido correctamente",

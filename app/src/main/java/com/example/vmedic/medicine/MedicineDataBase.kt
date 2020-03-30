@@ -68,7 +68,7 @@ class MedicineDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NA
         }
 
         if (counter==0){
-           presentation.add(0, "Seleccione su organizacion")
+           presentation.add(0, "Presentación")
         }
     }
 
