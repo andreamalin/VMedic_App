@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.vmedic.R
@@ -38,8 +39,9 @@ class PrincipalMedicine : Fragment() {
             val presentation = spinnerPresentation.getSelectedItem().toString()
 
             if (db.getMedicine(name, presentation)) {
-
-                view!!.findNavController().navigate(R.id.action_principalMedicine_to_stockSearch)
+                val actualMed = name
+                val bundle = bundleOf ("actual_med" to actualMed)
+                view!!.findNavController().navigate(R.id.action_principalMedicine_to_medicineCardView, bundle)
 
 
             } else {
@@ -49,6 +51,10 @@ class PrincipalMedicine : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
+
+        binding.buttonSeeAll.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_principalMedicine_to_medicineCardView)
         }
 
         return binding.root

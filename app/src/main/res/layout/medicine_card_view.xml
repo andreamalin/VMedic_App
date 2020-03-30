@@ -10,8 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#9A95FF">
+        android:layout_height="150dp"
+        android:background="#C5CAE9  ">
 
         <TextView
             android:id="@+id/medicineName"
@@ -20,7 +20,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:text="Medicine name"
+            android:text="Nombre"
             android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/amountTitle"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
@@ -44,27 +44,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.962" />
+            app:layout_constraintTop_toBottomOf="@+id/medicineName" />
 
         <TextView
             android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:text="numero"
             android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.81"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/amountTitle"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.495" />
+            app:layout_constraintVertical_bias="0.473" />
 
         <TextView
             android:id="@+id/dueDateTitle"
-            android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:text="Fecha de vencimiento"
@@ -74,50 +73,73 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/medicineName"
-            app:layout_constraintVertical_bias="0.44" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/dueDate"
             android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:layout_marginStart="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
             android:text="fecha"
             android:textColor="#000"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/amount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/amount"
-            app:layout_constraintVertical_bias="0.03" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/dueDateTitle" />
 
         <TextView
             android:id="@+id/localizationTitle"
-            android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:text="Localizacion"
+            android:text="Localización"
             android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/medicineName"
-            app:layout_constraintVertical_bias="0.745" />
+            app:layout_constraintVertical_bias="0.426" />
 
         <TextView
             android:id="@+id/localization"
             android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:layout_marginStart="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
             android:text="localidad"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/localizationTitle"
+            app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+        <TextView
+            android:id="@+id/presentationnTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Presentación"
             android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.829"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/amount"
-            app:layout_constraintVertical_bias="0.515" />
+            app:layout_constraintTop_toBottomOf="@+id/medicineName"
+            app:layout_constraintVertical_bias="0.629" />
+
+        <TextView
+            android:id="@+id/presentation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="presentación"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/presentationnTitle"
+            app:layout_constraintTop_toBottomOf="@+id/localization" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

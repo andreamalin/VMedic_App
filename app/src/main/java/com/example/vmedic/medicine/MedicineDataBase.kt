@@ -21,6 +21,8 @@ var amount = 0
 var dueDate = ""
 var medLocation = ""
 
+var medicineList = ArrayList<Medicine>()
+
 class MedicineDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NAME, null, 4) {
     //Creating table
     override fun onCreate(db: SQLiteDatabase?) {
@@ -38,6 +40,7 @@ class MedicineDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NA
 
     //Insert needed for table
     fun insert(medicine : Medicine){
+        medicineList.add(medicine) //Adding to list for card views
         addPresentation (medicine) //Adding org info
         val db = this.writableDatabase
         val cv = ContentValues()
@@ -102,5 +105,9 @@ class MedicineDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NA
     }
     fun getMedLocation(): String{
         return medLocation
+    }
+
+    fun getMedicineList(): ArrayList<Medicine>{
+        return medicineList
     }
 }
