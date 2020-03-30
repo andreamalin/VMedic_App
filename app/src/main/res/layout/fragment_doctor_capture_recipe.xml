@@ -8,13 +8,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <ImageView
+            android:id="@+id/imageViewRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="200dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
         <Button
-            android:id="@+id/buttonWriteRecipe"
+            android:id="@+id/buttonCaptureRecipe"
             style="@style/redButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Ingresar receta manual"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="Tomar foto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewRecipe"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonSendRecipe"
+            style="@style/redButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Mandar receta"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -23,46 +53,18 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/buttonStock"
+            android:id="@+id/buttonCancel"
             style="@style/redButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Revisar inventario"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Cancelar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
-
-        <Button
-            android:id="@+id/buttonCaptureRecipe"
-            style="@style/redButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Tomar foto a receta"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonStock"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textViewDoctor"
-            android:layout_width="208dp"
-            android:layout_height="107dp"
-            android:layout_marginTop="132dp"
-            android:layout_marginBottom="100dp"
-            android:gravity="center"
-            android:text="Bienvenido, doctor"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toTopOf="@+id/buttonStock"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSendRecipe"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -30,7 +30,14 @@
     <fragment
         android:id="@+id/doctor"
         android:name="com.example.vmedic.doctor.Doctor"
-        android:label="Doctor" />
+        android:label="Doctor" >
+        <action
+            android:id="@+id/action_doctor_to_doctorManualRecipe"
+            app:destination="@id/doctorManualRecipe" />
+        <action
+            android:id="@+id/action_doctor_to_doctorCaptureRecipe"
+            app:destination="@id/doctorCaptureRecipe" />
+    </fragment>
     <fragment
         android:id="@+id/admin"
         android:name="com.example.vmedic.admin.Admin"
@@ -49,6 +56,22 @@
         android:id="@+id/stockSearch"
         android:name="com.example.vmedic.medicine.medicineStock.StockSearch"
         android:label="StockSearch" />
+    <fragment
+        android:id="@+id/doctorManualRecipe"
+        android:name="com.example.vmedic.doctor.DoctorManualRecipe"
+        android:label="DoctorManualRecipe" >
+        <action
+            android:id="@+id/action_doctorManualRecipe_to_doctor"
+            app:destination="@id/doctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorCaptureRecipe"
+        android:name="com.example.vmedic.doctor.DoctorCaptureRecipe"
+        android:label="DoctorCaptureRecipe" >
+        <action
+            android:id="@+id/action_doctorCaptureRecipe_to_doctor"
+            app:destination="@id/doctor" />
+    </fragment>
 
 
 </navigation>

@@ -1,12 +1,15 @@
 package com.example.vmedic.doctor
 
 
+import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 
 import com.example.vmedic.R
 import com.example.vmedic.databinding.FragmentDoctorBinding
@@ -21,6 +24,15 @@ class Doctor : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_doctor, container, false
         )
+
+
+        binding.buttonWriteRecipe.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_doctor_to_doctorManualRecipe)
+        }
+
+        binding.buttonCaptureRecipe.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_doctor_to_doctorCaptureRecipe)
+        }
 
         return binding.root
     }
