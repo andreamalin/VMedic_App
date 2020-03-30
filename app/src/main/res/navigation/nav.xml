@@ -59,7 +59,7 @@
     <fragment
         android:id="@+id/doctorManualRecipe"
         android:name="com.example.vmedic.doctor.DoctorManualRecipe"
-        android:label="DoctorManualRecipe" >
+        android:label="Receta" >
         <action
             android:id="@+id/action_doctorManualRecipe_to_doctor"
             app:destination="@id/doctor" />
@@ -67,7 +67,7 @@
     <fragment
         android:id="@+id/doctorCaptureRecipe"
         android:name="com.example.vmedic.doctor.DoctorCaptureRecipe"
-        android:label="DoctorCaptureRecipe" >
+        android:label="Receta" >
         <action
             android:id="@+id/action_doctorCaptureRecipe_to_doctor"
             app:destination="@id/doctor" />
