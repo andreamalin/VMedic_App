@@ -4,7 +4,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.vmedic.medicine.Medicine
 
 //Code reference: CodeAndroid
 //https://www.youtube.com/channel/UCMvagHKkUlt3t_E4KxwQXXQ

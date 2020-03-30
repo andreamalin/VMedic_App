@@ -37,11 +37,18 @@
         <action
             android:id="@+id/action_doctor_to_doctorCaptureRecipe"
             app:destination="@id/doctorCaptureRecipe" />
+        <action
+            android:id="@+id/action_doctor_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
     </fragment>
     <fragment
         android:id="@+id/admin"
         android:name="com.example.vmedic.admin.Admin"
-        android:label="Admin" />
+        android:label="Admin" >
+        <action
+            android:id="@+id/action_admin_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+    </fragment>
     <fragment
         android:id="@+id/principalMedicine"
         android:name="com.example.vmedic.medicine.PrincipalMedicine"

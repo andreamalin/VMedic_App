@@ -34,6 +34,10 @@ class Doctor : Fragment() {
             view!!.findNavController().navigate(R.id.action_doctor_to_doctorCaptureRecipe)
         }
 
+        binding.buttonStock.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_doctor_to_principalMedicine)
+        }
+
         return binding.root
     }
 

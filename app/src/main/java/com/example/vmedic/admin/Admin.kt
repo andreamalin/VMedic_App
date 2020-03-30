@@ -8,10 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 
 import com.example.vmedic.R
 import com.example.vmedic.databinding.FragmentAdminBinding
+import com.example.vmedic.medicine.Medicine
+import com.example.vmedic.medicine.MedicineDataBase
 import kotlinx.android.synthetic.main.fragment_admin.*
+import kotlinx.android.synthetic.main.fragment_principal.*
 
 class Admin: Fragment() {
     private lateinit var binding: FragmentAdminBinding
@@ -29,22 +33,20 @@ class Admin: Fragment() {
         super.onCreate(savedInstanceState)
 
         binding.buttonAgregar.setOnClickListener {
-            val admi = AdminSQLiteOpenHelper(context!!, "Medicamentos", null, 1)
-            val db = admi.writableDatabase
-            val registro = ContentValues()
-            registro.put("Nombre", et1.getText().toString())
-            registro.put("Presentación", et2.getText().toString())
-            registro.put("Descripcion", et3.getText().toString())
-            db.insert("medicamentos", null, registro)
-            db.close()
-            et1.setText("")
-            et2.setText("")
-            et3.setText("")
+            val db = MedicineDataBase(context)
+            val name = et1.getText().toString()
+            val presentation = et2.getText().toString()
+            val amount = et3.getText().toString().toInt()
+
+            db.insert(Medicine(name, amount, presentation, name, presentation))
             Toast.makeText(
                 activity,
                 "Los medicamentos se han añadido correctamente",
                 Toast.LENGTH_SHORT
             ).show()
+        }
+        binding.buttonInventario.setOnClickListener {
+            view!!.findNavController().navigate(R.id.action_admin_to_principalMedicine)
         }
         return binding.root
     }

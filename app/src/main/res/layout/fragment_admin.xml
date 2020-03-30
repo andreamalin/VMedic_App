@@ -45,8 +45,11 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="545dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.803" />
 
         <Button
             android:id="@+id/buttonCerrar"
@@ -57,8 +60,11 @@
             android:textColor="#FDF7F7"
             android:textSize="18sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="174dp"
-            tools:layout_editor_absoluteY="664dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAgregar"
+            app:layout_constraintVertical_bias="0.481" />
 
         <TextView
             android:id="@+id/textView"
@@ -67,37 +73,51 @@
             android:fontFamily="casual"
             android:text="@string/adm"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="117dp"
-            tools:layout_editor_absoluteY="172dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.256" />
 
         <EditText
             android:id="@+id/et1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:ems="10"
             android:hint="@string/editAdmi"
             android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="99dp"
-            tools:layout_editor_absoluteY="235dp" />
+            app:layout_constraintBottom_toTopOf="@+id/et2"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.48"
+            tools:layout_editor_absoluteX="97dp" />
 
         <EditText
             android:id="@+id/et2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:ems="10"
             android:hint="@string/editAdmii"
             android:inputType="textShortMessage"
-            tools:layout_editor_absoluteX="99dp"
-            tools:layout_editor_absoluteY="301dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/editAdmiii"
+            android:hint="@string/Amount"
             android:inputType="textLongMessage"
-            tools:layout_editor_absoluteX="97dp"
-            tools:layout_editor_absoluteY="369dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et2"
+            app:layout_constraintVertical_bias="0.062" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
