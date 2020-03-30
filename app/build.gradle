@@ -39,6 +39,11 @@ dependencies {
     // Room
     implementation "android.arch.persistence.room:runtime:1.0.0"
     kapt "android.arch.persistence.room:compiler:1.0.0"
+    // Card View
+    implementation "androidx.cardview:cardview:1.0.0"
+    // Recycler View
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
