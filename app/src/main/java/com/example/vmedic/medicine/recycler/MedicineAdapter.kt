@@ -13,7 +13,7 @@ class MedicineAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return AnswerViewHolder(
-            LayoutInflater.from(parent.context!!).inflate(R.layout.search_results, parent, false)
+            LayoutInflater.from(parent.context!!).inflate(R.layout.medicine_card_view, parent, false)
         )
     }
 
