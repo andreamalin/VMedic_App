@@ -62,6 +62,7 @@ class Admin: Fragment() {
     //Item Selected
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
+        view!!.findNavController().navigate(R.id.action_admin_to_recipeCardView2)
 
 
         return NavigationUI.onNavDestinationSelected(item, view!!.findNavController())

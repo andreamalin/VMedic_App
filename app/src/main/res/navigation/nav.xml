@@ -56,8 +56,8 @@
             android:id="@+id/action_admin_to_principalMedicine"
             app:destination="@id/principalMedicine" />
         <action
-            android:id="@+id/action_admin_self"
-            app:destination="@id/admin" />
+            android:id="@+id/action_admin_to_recipeCardView2"
+            app:destination="@id/recipeCardView" />
     </fragment>
     <fragment
         android:id="@+id/principalMedicine"
