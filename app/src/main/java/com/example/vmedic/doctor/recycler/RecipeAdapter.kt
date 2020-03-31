@@ -1,4 +1,4 @@
-package com.example.vmedic.medicine.recycler
+package com.example.vmedic.doctor.recycler
 
 import android.net.Uri
 import android.view.LayoutInflater
