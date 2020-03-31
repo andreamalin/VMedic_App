@@ -85,10 +85,10 @@
             app:layout_constraintVertical_bias="0.883" />
 
         <TextView
-            android:id="@+id/present"
+            android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="presentacion"
+            android:text="cantidad"
             android:textColor="#000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -116,10 +116,10 @@
             app:layout_constraintVertical_bias="0.33" />
 
         <TextView
-            android:id="@+id/amount"
+            android:id="@+id/present"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cantidad"
+            android:text="presentacion"
             android:textColor="#000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
