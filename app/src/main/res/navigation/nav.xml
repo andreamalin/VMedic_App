@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_volunteer_to_principalMedicine"
             app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_volunteer_to_principal"
+            app:destination="@id/principal" />
     </fragment>
     <fragment
         android:id="@+id/doctor"
@@ -46,6 +49,9 @@
         <action
             android:id="@+id/action_doctor_to_principalMedicine"
             app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_doctor_to_principal"
+            app:destination="@id/principal" />
     </fragment>
     <fragment
         android:id="@+id/admin"
@@ -58,6 +64,9 @@
         <action
             android:id="@+id/action_admin_to_recipeCardView2"
             app:destination="@id/recipeCardView" />
+        <action
+            android:id="@+id/action_admin_to_principal"
+            app:destination="@id/principal" />
     </fragment>
     <fragment
         android:id="@+id/principalMedicine"

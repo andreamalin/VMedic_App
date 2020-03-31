@@ -26,6 +26,9 @@ class Volunteer : Fragment() {
         binding.buttonInventario.setOnClickListener{
             view!!.findNavController().navigate(R.id.action_volunteer_to_principalMedicine)
         }
+        binding.buttonClose.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_volunteer_to_principal)
+        }
 
         return binding.root
     }

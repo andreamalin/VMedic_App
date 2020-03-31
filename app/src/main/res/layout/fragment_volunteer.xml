@@ -65,6 +65,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <Button
+            android:id="@+id/buttonClose"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="36dp"
+            android:background="#E14242"
+            android:text="x"
+            android:textColor="#F8F5F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonInventario" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

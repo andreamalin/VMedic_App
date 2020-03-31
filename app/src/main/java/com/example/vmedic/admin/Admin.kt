@@ -6,6 +6,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 
@@ -51,6 +52,9 @@ class Admin: Fragment() {
         }
         binding.buttonInventario.setOnClickListener {
             view!!.findNavController().navigate(R.id.action_admin_to_principalMedicine)
+        }
+        binding.buttonClose.setOnClickListener{
+            view!!.findNavController().navigate(R.id.action_admin_to_principal)
         }
         return binding.root
     }
