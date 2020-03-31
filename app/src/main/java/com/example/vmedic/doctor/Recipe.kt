@@ -3,6 +3,7 @@ package com.example.vmedic.doctor;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import com.example.vmedic.R
 
 //Entity class for vmedic table
 @Entity(tableName = "doctor_recipe_table")
@@ -27,7 +28,15 @@ class Recipe {
         this.medicine = medicine
         this.dose = dose
         this.presentation = presentation
-        this.image = image
+
+        if (image==""){
+            this.image = R.drawable.noback.toString()
+        } else {
+            this.image = image
+        }
+
+
+
     }
 
 }

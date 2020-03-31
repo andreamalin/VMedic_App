@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 //Code reference: CodeAndroid
 //https://www.youtube.com/channel/UCMvagHKkUlt3t_E4KxwQXXQ
@@ -36,6 +37,7 @@ class DoctorDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NAME
         val db = this.writableDatabase
         val cv = ContentValues()
         recipeList.add(recipe)
+        Log.d("Se agrega", "Agrega")
 
         cv.put(COL_MEDICINE, recipe.medicine)
         cv.put(COL_DOSE, recipe.dose)

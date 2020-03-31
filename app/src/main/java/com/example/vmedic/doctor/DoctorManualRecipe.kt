@@ -34,6 +34,7 @@ class DoctorManualRecipe : Fragment() {
             val dose = editTextDosis.getText().toString().toInt()
             val presentation = editTextPresentation.getText().toString()
 
+
             db.insert(Recipe(medicine, dose, presentation, ""))
 
             //Clearing edit text on view after adding the med to recipe
@@ -43,6 +44,14 @@ class DoctorManualRecipe : Fragment() {
         }
 
         binding.buttonComplete.setOnClickListener{
+            //Get info of request
+            val medicine = editTextMedName.getText().toString()
+            val dose = editTextDosis.getText().toString().toInt()
+            val presentation = editTextPresentation.getText().toString()
+
+
+            db.insert(Recipe(medicine, dose, presentation, ""))
+
             //Returns to doctor main view
             view!!.findNavController().navigate(R.id.action_doctorManualRecipe_to_doctor)
         }
