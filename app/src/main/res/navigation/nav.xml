@@ -27,7 +27,11 @@
         android:id="@+id/volunteer"
         android:name="com.example.vmedic.volunteer.Volunteer"
         android:label="Voluntario"
-        tools:layout="@layout/fragment_volunteer"/>
+        tools:layout="@layout/fragment_volunteer">
+        <action
+            android:id="@+id/action_volunteer_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+    </fragment>
     <fragment
         android:id="@+id/doctor"
         android:name="com.example.vmedic.doctor.Doctor"
@@ -51,6 +55,9 @@
         <action
             android:id="@+id/action_admin_to_principalMedicine"
             app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_admin_self"
+            app:destination="@id/admin" />
     </fragment>
     <fragment
         android:id="@+id/principalMedicine"
@@ -86,6 +93,11 @@
         android:name="com.example.vmedic.medicine.recycler.MedicineCardView"
         android:label="Información Medicamento"
         tools:layout="@layout/fragment_medicine_card_view" />
+    <fragment
+        android:id="@+id/recipeCardView"
+        android:name="com.example.vmedic.doctor.recycler.RecipeCardView"
+        tools:layout="@layout/fragment_medicine_card_view"
+        android:label="Pedidos Doctor" />
 
 
 </navigation>

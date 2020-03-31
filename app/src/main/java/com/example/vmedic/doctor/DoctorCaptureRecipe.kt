@@ -56,7 +56,8 @@ class DoctorCaptureRecipe : Fragment() {
         binding.buttonSendRecipe.setOnClickListener{
             val imageRecipe = image_uri.toString()
 
-            db.insert(Recipe("", "", "", imageRecipe))
+            db.insert(Recipe("", 0, "", imageRecipe))
+            view!!.findNavController().navigate(R.id.action_doctorCaptureRecipe_to_doctor)
         }
 
         binding.buttonCancel.setOnClickListener{

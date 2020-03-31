@@ -11,4 +11,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Amount">Cantidad</string>
+    <string name="infoVoluntario">Hola Voluntario, ¿Necesitas ayuda con algún medicamento? ¡Consulta el inventario!</string>
+    <string name="voluntario">Ventana de voluntario</string>
+    <string name="doctor">Ventana de doctor</string>
 </resources>

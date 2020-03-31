@@ -13,17 +13,17 @@ val DATABASE_NAME = "DoctorDB"
 val TABLE_NAME = "DoctorRecipes"
 val COL_MEDICINE = "Medicine"
 val COL_DOSE = "Dose"
-val COL_EXTRA = "Extra"
+val COL_PRESENTATION = "Presentation"
 var COL_IMAGE = "Image"
 
-
+var recipeList = ArrayList<Recipe>()
 class DoctorDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NAME, null, 4) {
     //Creating table
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE " +TABLE_NAME+ "(" +
                 COL_MEDICINE+" TEXT,"+
                 COL_DOSE + " TEXT," +
-                COL_EXTRA + " TEXT," +
+                COL_PRESENTATION + " TEXT," +
                 COL_IMAGE + " TEXT);"
         db?.execSQL(createTable)
     }
@@ -35,15 +35,20 @@ class DoctorDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NAME
     fun insert(recipe: Recipe){
         val db = this.writableDatabase
         val cv = ContentValues()
+        recipeList.add(recipe)
 
         cv.put(COL_MEDICINE, recipe.medicine)
         cv.put(COL_DOSE, recipe.dose)
-        cv.put(COL_EXTRA, recipe.extra)
+        cv.put(COL_PRESENTATION, recipe.presentation)
         cv.put(COL_IMAGE, recipe.image)
 
 
 
         db.insert(TABLE_NAME,null,cv)
         db.close()
+    }
+
+    fun getRecipeList(): ArrayList<Recipe>{
+        return recipeList
     }
 }

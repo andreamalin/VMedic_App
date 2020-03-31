@@ -1,5 +1,6 @@
 package com.example.vmedic.doctor
 
+import android.icu.math.BigDecimal.valueOf
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,15 +31,15 @@ class DoctorManualRecipe : Fragment() {
         binding.buttonAdd.setOnClickListener{
             //Get info of last request
             val medicine = editTextMedName.getText().toString()
-            val dose = editTextDosis.getText().toString()
-            val extra = editTextExtra.getText().toString()
+            val dose = editTextDosis.getText().toString().toInt()
+            val presentation = editTextPresentation.getText().toString()
 
-            db.insert(Recipe(medicine, dose, extra, ""))
+            db.insert(Recipe(medicine, dose, presentation, ""))
 
             //Clearing edit text on view after adding the med to recipe
             editTextMedName.getText().clear()
             editTextDosis.getText().clear()
-            editTextExtra.getText().clear()
+            editTextPresentation.getText().clear()
         }
 
         binding.buttonComplete.setOnClickListener{

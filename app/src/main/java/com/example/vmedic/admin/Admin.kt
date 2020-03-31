@@ -2,13 +2,12 @@ package com.example.vmedic.admin
 
 import android.content.ContentValues
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 import com.example.vmedic.R
 import com.example.vmedic.databinding.FragmentAdminBinding
@@ -31,6 +30,7 @@ class Admin: Fragment() {
             R.layout.fragment_admin, container, false
         )
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
 
         binding.buttonAgregar.setOnClickListener {
             val db = MedicineDataBase(context)
@@ -52,4 +52,20 @@ class Admin: Fragment() {
         }
         return binding.root
     }
+
+    //Menu
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    //Item Selected
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+
+
+        return NavigationUI.onNavDestinationSelected(item, view!!.findNavController())
+    }
+
+
 }

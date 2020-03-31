@@ -14,19 +14,19 @@ class Recipe {
     var medicine: String = "" //Medicine name
 
     @ColumnInfo(name = "dose")
-    var dose: String = "" //Dose required
+    var dose: Int = 0 //Dose required
 
-    @ColumnInfo(name = "extra")
-    var extra: String = "" //Extra comment
+    @ColumnInfo(name = "presentation")
+    var presentation: String = "" //Presentation
 
     @ColumnInfo(name = "image")
     var image: String = ""//Recipe image
 
 
-    constructor(medicine: String, dose:String, extra: String, image:String){
+    constructor(medicine: String, dose:Int, presentation: String, image:String){
         this.medicine = medicine
         this.dose = dose
-        this.extra = extra
+        this.presentation = presentation
         this.image = image
     }
 

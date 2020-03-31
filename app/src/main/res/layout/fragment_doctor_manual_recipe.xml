@@ -39,28 +39,28 @@
             app:layout_constraintVertical_bias="0.219" />
 
         <EditText
-            android:id="@+id/editTextDosis"
+            android:id="@+id/editTextPresentation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:ems="10"
-            android:hint="Dosis"
+            android:hint="Presentación caja/mg/etc"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextMedName" />
 
         <EditText
-            android:id="@+id/editTextExtra"
+            android:id="@+id/editTextDosis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:ems="10"
-            android:hint="Comentario extra"
-            android:inputType="textPersonName"
+            android:hint="Cantidad recetada"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextDosis" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPresentation" />
 
         <Button
             android:id="@+id/buttonAdd"
@@ -109,6 +109,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonComplete"
             app:layout_constraintVertical_bias="0.0" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
