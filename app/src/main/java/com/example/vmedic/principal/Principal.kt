@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
@@ -23,6 +24,8 @@ class Principal : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_principal, container, false
         )
+        //Keyboard
+        getActivity()?.getWindow()?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         createAccounts() //Creating accounts
         //Spinner
         val adapter = ArrayAdapter(context!!,android.R.layout.simple_spinner_item, db.getOrg())

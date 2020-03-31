@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 
@@ -24,7 +25,8 @@ class Doctor : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_doctor, container, false
         )
-
+        //Keyboard
+        getActivity()?.getWindow()?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
 
         binding.buttonWriteRecipe.setOnClickListener{
             view!!.findNavController().navigate(R.id.action_doctor_to_doctorManualRecipe)

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 
@@ -24,6 +25,8 @@ class DoctorManualRecipe : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_doctor_manual_recipe, container, false
         )
+        //Keyboard
+        getActivity()?.getWindow()?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         //Data base
         val db = DoctorDataBase(context)
 

@@ -29,6 +29,8 @@ class Admin: Fragment() {
             inflater,
             R.layout.fragment_admin, container, false
         )
+        //Keyboard
+        getActivity()?.getWindow()?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 
