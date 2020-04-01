@@ -2,7 +2,6 @@ package com.example.vmedic.doctor.recycler
 
 import com.example.vmedic.doctor.DoctorDataBase
 import com.example.vmedic.doctor.Recipe
-import com.example.vmedic.medicine.recycler.RecipeAdapter
 import com.example.vmedic.medicine.recycler.TopSpacingItem
 
 
