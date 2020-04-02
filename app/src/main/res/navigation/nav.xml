@@ -101,12 +101,20 @@
         android:id="@+id/medicineCardView"
         android:name="com.example.vmedic.medicine.recycler.MedicineCardView"
         android:label="Información Medicamento"
-        tools:layout="@layout/fragment_medicine_card_view" />
+        tools:layout="@layout/fragment_medicine_card_view" >
+        <action
+            android:id="@+id/action_medicineCardView_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+    </fragment>
     <fragment
         android:id="@+id/recipeCardView"
         android:name="com.example.vmedic.doctor.recycler.RecipeCardView"
         tools:layout="@layout/fragment_medicine_card_view"
-        android:label="Pedidos Doctor" />
+        android:label="Pedidos Doctor" >
+        <action
+            android:id="@+id/action_recipeCardView_to_admin"
+            app:destination="@id/admin" />
+    </fragment>
 
 
 </navigation>

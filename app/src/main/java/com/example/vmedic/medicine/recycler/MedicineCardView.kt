@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vmedic.R
 import com.example.vmedic.databinding.FragmentMedicineCardViewBinding
@@ -59,6 +60,12 @@ class MedicineCardView : Fragment() {
             adapter = medicineAdapter
             medicineAdapter.submitList(medicineList)
 
+        }
+
+        //Erasing everything on card  view
+        binding.buttonClean.setOnClickListener{
+            db.cleanMedicineList()
+            view!!.findNavController().navigate(R.id.action_medicineCardView_to_principalMedicine)
         }
 
         return binding.root

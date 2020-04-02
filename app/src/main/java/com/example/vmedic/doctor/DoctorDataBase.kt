@@ -53,4 +53,8 @@ class DoctorDataBase(context: Context?): SQLiteOpenHelper(context, DATABASE_NAME
     fun getRecipeList(): ArrayList<Recipe>{
         return recipeList
     }
+
+    fun cleanRecipeList(){
+        recipeList.clear()
+    }
 }

@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vmedic.R
 import com.example.vmedic.databinding.FragmentMedicineCardViewBinding
@@ -40,6 +41,12 @@ class RecipeCardView : Fragment() {
             adapter = recipeAdapter
             recipeAdapter.submitList(recipeList)
 
+        }
+
+        //Erasing everything on card  view
+        binding.buttonClean.setOnClickListener{
+            db.cleanRecipeList()
+            view!!.findNavController().navigate(R.id.action_recipeCardView_to_admin)
         }
 
         return binding.root
