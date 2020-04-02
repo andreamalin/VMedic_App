@@ -34,11 +34,13 @@ class DoctorManualRecipe : Fragment() {
         binding.buttonAdd.setOnClickListener{
             //Get info of last request
             val medicine = editTextMedName.getText().toString()
-            val dose = editTextDosis.getText().toString().toInt()
-            val presentation = editTextPresentation.getText().toString()
+            if (medicine != ""){
+                val dose = editTextDosis.getText().toString().toInt()
+                val presentation = editTextPresentation.getText().toString()
 
 
-            db.insert(Recipe(medicine, dose, presentation, ""))
+                db.insert(Recipe(medicine, dose, presentation, ""))
+            }
 
             //Clearing edit text on view after adding the med to recipe
             editTextMedName.getText().clear()
