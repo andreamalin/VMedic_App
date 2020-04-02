@@ -47,8 +47,12 @@ class MedicineCardView : Fragment() {
                     medicineItem = item
                     newMedicineList.add(medicineItem)
                     medicineList = newMedicineList
+
+                    binding.buttonClean.setVisibility(View.GONE)
                 }
             }
+        } else {
+            binding.buttonClean.setVisibility(View.VISIBLE)
         }
 
 
