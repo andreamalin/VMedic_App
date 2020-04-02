@@ -33,8 +33,8 @@ class DoctorManualRecipe : Fragment() {
         //Functions
         binding.buttonAdd.setOnClickListener{
             //Get info of last request
-            val medicine = editTextMedName.getText().toString()
-            if (medicine != ""){
+            if (editTextPresentation.getText().toString() != "" && editTextMedName.getText().toString()!= "" && editTextDosis.getText().toString() != ""){
+                val medicine = editTextMedName.getText().toString()
                 val dose = editTextDosis.getText().toString().toInt()
                 val presentation = editTextPresentation.getText().toString()
 
@@ -50,13 +50,14 @@ class DoctorManualRecipe : Fragment() {
 
         binding.buttonComplete.setOnClickListener{
             //Get info of request
-            val medicine = editTextMedName.getText().toString()
-            val dose = editTextDosis.getText().toString().toInt()
-            val presentation = editTextPresentation.getText().toString()
+            if (editTextPresentation.getText().toString() != "" && editTextMedName.getText().toString()!= "" && editTextDosis.getText().toString() != ""){
+                val medicine = editTextMedName.getText().toString()
+                val dose = editTextDosis.getText().toString().toInt()
+                val presentation = editTextPresentation.getText().toString()
 
 
-            db.insert(Recipe(medicine, dose, presentation, ""))
-
+                db.insert(Recipe(medicine, dose, presentation, ""))
+            }
             //Returns to doctor main view
             view!!.findNavController().navigate(R.id.action_doctorManualRecipe_to_doctor)
         }
