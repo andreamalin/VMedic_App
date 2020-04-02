@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/principal">
+
+    <fragment
+        android:id="@+id/principal"
+        android:name="com.example.vmedic.principal.Principal"
+        android:label="V Medic+"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principal_to_volunteer"
+            app:destination="@id/volunteer"
+            tools:layout="@layout/fragment_volunteer"/>
+        <action
+            android:id="@+id/action_principal_to_doctor"
+            app:destination="@id/doctor"
+            tools:layout="@layout/fragment_doctor"/>
+        <action
+            android:id="@+id/action_principal_to_admin"
+            app:destination="@id/admin"
+            tools:layout="@layout/fragment_admin"/>
+    </fragment>
+    <fragment
+        android:id="@+id/volunteer"
+        android:name="com.example.vmedic.volunteer.Volunteer"
+        android:label="Voluntario"
+        tools:layout="@layout/fragment_volunteer">
+        <action
+            android:id="@+id/action_volunteer_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_volunteer_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctor"
+        android:name="com.example.vmedic.doctor.Doctor"
+        android:label="Doctor"
+        tools:layout="@layout/fragment_doctor">
+        <action
+            android:id="@+id/action_doctor_to_doctorManualRecipe"
+            app:destination="@id/doctorManualRecipe" />
+        <action
+            android:id="@+id/action_doctor_to_doctorCaptureRecipe"
+            app:destination="@id/doctorCaptureRecipe" />
+        <action
+            android:id="@+id/action_doctor_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_doctor_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin"
+        android:name="com.example.vmedic.admin.Admin"
+        android:label="Administrador"
+        tools:layout="@layout/fragment_admin">
+        <action
+            android:id="@+id/action_admin_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+        <action
+            android:id="@+id/action_admin_to_recipeCardView2"
+            app:destination="@id/recipeCardView" />
+        <action
+            android:id="@+id/action_admin_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
+    <fragment
+        android:id="@+id/principalMedicine"
+        android:name="com.example.vmedic.medicine.PrincipalMedicine"
+        android:label="Búsqueda Medicamento"
+        tools:layout="@layout/fragment_stock_location"
+        >
+        <action
+            android:id="@+id/action_principalMedicine_to_medicineCardView"
+            app:destination="@id/medicineCardView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorManualRecipe"
+        android:name="com.example.vmedic.doctor.DoctorManualRecipe"
+        android:label="Receta"
+        tools:layout="@layout/fragment_doctor_manual_recipe">
+        <action
+            android:id="@+id/action_doctorManualRecipe_to_doctor"
+            app:destination="@id/doctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorCaptureRecipe"
+        android:name="com.example.vmedic.doctor.DoctorCaptureRecipe"
+        android:label="Receta"
+        tools:layout="@layout/fragment_doctor_capture_recipe">
+        <action
+            android:id="@+id/action_doctorCaptureRecipe_to_doctor"
+            app:destination="@id/doctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineCardView"
+        android:name="com.example.vmedic.medicine.recycler.MedicineCardView"
+        android:label="Información Medicamento"
+        tools:layout="@layout/fragment_medicine_card_view" >
+        <action
+            android:id="@+id/action_medicineCardView_to_principalMedicine"
+            app:destination="@id/principalMedicine" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeCardView"
+        android:name="com.example.vmedic.doctor.recycler.RecipeCardView"
+        tools:layout="@layout/fragment_medicine_card_view"
+        android:label="Pedidos Doctor" >
+        <action
+            android:id="@+id/action_recipeCardView_to_admin"
+            app:destination="@id/admin" />
+    </fragment>
+
+
+</navigation>
